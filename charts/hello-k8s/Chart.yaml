@@ -1,0 +1,6 @@
+# charts/hello-k8s/Chart.yaml
+apiVersion: v2
+name: hello-k8s
+version: 0.1.0
+appVersion: "1.0"
+description: A simple Hello World web app deployed on Kubernetes
