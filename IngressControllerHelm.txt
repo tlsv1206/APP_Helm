@@ -1,0 +1,6 @@
+aws eks update-kubeconfig --region us-east-1 --name stage-eks-cluster
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+        helm repo update
+        helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx \
+          --namespace ingress-nginx --create-namespace
