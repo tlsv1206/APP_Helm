@@ -2,11 +2,11 @@ replicaCount: 2
 
 image:
   repository: tiagovedana/hello-k8s
-  tag: v2
+  tag: staging
   pullPolicy: IfNotPresent
 
 app:
-  name: hello-world
+  name: hello-world-staging
   port: 5000
   env: staging
 
@@ -21,4 +21,4 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /
   path: /
   pathType: Prefix
-  host: hello-world.local
+  host: hello-world-staging.tvedana.com

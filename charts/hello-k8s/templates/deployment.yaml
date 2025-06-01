@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: {{ include "hello-k8s.fullname" . }}
   labels:
     app: {{ .Values.app.name }}
+
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
